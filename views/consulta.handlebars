@@ -1,0 +1,30 @@
+    <div class="container">
+        <h2>Tela de Consulta dos Pets</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome do pet</th>
+                    <th>Telefone</th>
+                    <th>Serviços</th>
+                    <th>Data do agendamento</th>
+                    <th>Observação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{this.nome}}</td>
+                    <td>{{this.telefone}}</td>
+                    <td>{{this.origem}}</td>
+                    <td>{{this.data_contato}}</td>
+                    <td>{{this.observacao}}</td>
+                    <td>
+                        <a href="/editar/{{id}}"><button class="btn btn-dark">Editar</button></a></br></br>
+                        <a href="/excluir/{{id}}"><button class="btn btn-dark">Excluir</button></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    
